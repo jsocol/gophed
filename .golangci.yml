@@ -54,7 +54,7 @@ linters-settings:
   errcheck:
     # report about not checking of errors in type assetions: `a := b.(MyStruct)`;
     # default is false: such cases aren't reported by default.
-    check-type-assertions: false
+    check-type-assertions: true
 
     # report about assignment of errors to blank identifier: `num, _ := strconv.Atoi(numStr)`;
     # default is false: such cases aren't reported by default.
@@ -171,6 +171,8 @@ linters-settings:
       # - wrapperFunc
 
 issues:
+  exclude:
+    - "Error return value of .w\\.Write. is not checked"
 
   exclude-rules:
     # Exclude some linters from running on test files.
