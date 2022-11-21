@@ -1,0 +1,11 @@
+{
+	"subject": "acct:alice@my-example.com",
+
+	"links": [
+		{
+			"rel": "self",
+			"type": "application/activity+json",
+			"href": "https://my-example.com/actor"
+		}
+	]
+}
