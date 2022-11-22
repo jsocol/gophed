@@ -10,6 +10,7 @@ import (
 	"time"
 
 	"github.com/jsocol/gophed/handlers"
+	"github.com/jsocol/gophed/middleware"
 	"github.com/jsocol/gophed/repository"
 )
 
@@ -30,7 +31,7 @@ func main() {
 	}
 
 	srv := http.Server{
-		Handler:           mux,
+		Handler:           &middleware.Log{Target: mux},
 		ReadHeaderTimeout: 1 * time.Second,
 	}
 
